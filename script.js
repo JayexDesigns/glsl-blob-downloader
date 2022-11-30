@@ -1,6 +1,3 @@
-// Blob Code Modified From
-// https://codepen.io/vcomics/pen/ZwNgvX
-
 window.addEventListener("load", () => {
 	createCanvas();
 	createBlob();

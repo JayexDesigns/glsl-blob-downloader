@@ -1,3 +1,6 @@
+// Shader Modified From
+// https://github.com/ashima/webgl-noise
+
 const vshader = `
 vec3 mod289(vec3 x) {
 	return x - floor(x * (1.0 / 289.0)) * 289.0;
