@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/png" href="favicon.ico" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+			rel="stylesheet" />
+		<title>GLSL Blob</title>
+	</head>
+	<body>
+		<div id="container">
+			<div id="canvasContainer">
+				<div id="captureContainer">
+					<canvas id="blobCanvas"></canvas>
+					<p id="canvasText"></p>
+				</div>
+			</div>
+			<div id="options">
+				<a href="#" id="downloadTag" download="img.jpg">Download</a>
+				<button id="downloadButton">Download</button>
+				<input
+					type="text"
+					id="coverText"
+					name="coverText"
+					placeholder="Cover Text" />
+
+				<section class="fontSection">
+					<label for="fontSize">Font Size</label>
+					<input
+						type="range"
+						id="fontSize"
+						name="fontSize"
+						value="55" />
+				</section>
+
+				<section class="colorSection">
+					<div
+						class="colorInputContainer"
+						id="backgroundColorContainer">
+						<input
+							type="color"
+							id="backgroundColor"
+							name="backgroundColor"
+							value="#ffffff" />
+					</div>
+					<label for="backgroundColor">Background Color</label>
+				</section>
+				<section class="colorSection">
+					<div class="colorInputContainer" id="color1Container">
+						<input
+							type="color"
+							id="color1"
+							name="color1"
+							value="#3a0ca3" />
+					</div>
+					<label for="color1">Color 1</label>
+				</section>
+				<section class="colorSection">
+					<div class="colorInputContainer" id="color2Container">
+						<input
+							type="color"
+							id="color2"
+							name="color2"
+							value="#4cc9f0" />
+					</div>
+					<label for="color2">Color 2</label>
+				</section>
+				<section class="colorSection">
+					<div class="colorInputContainer" id="textColorContainer">
+						<input
+							type="color"
+							id="textColor"
+							name="textColor"
+							value="#ffffff" />
+					</div>
+					<label for="textColor">Text Color</label>
+				</section>
+
+				<section class="positionSection">
+					<label for="blobPositionX">Blob Position X</label>
+					<input
+						type="range"
+						id="blobPositionX"
+						name="blobPositionX"
+						value="50" />
+					<label for="blobPositionY">Blob Position Y</label>
+					<input
+						type="range"
+						id="blobPositionY"
+						name="blobPositionY"
+						value="50" />
+				</section>
+
+				<section class="blobSizeSection">
+					<label for="blobSize">Blob Size</label>
+					<input
+						type="range"
+						id="blobSize"
+						name="blobSize"
+						value="85" />
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+
+		<script src="html2canvas.min.js"></script>
+		<script src="shaders.js"></script>
+		<script src="script.js"></script>
+		<script src="ui.js"></script>
+	</body>
+</html>
