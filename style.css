@@ -86,6 +86,7 @@ body {
 	transform: translate(-50%, -50%);
 	font-weight: 900;
 	font-size: var(--canvas-font-size);
+	text-align: center;
 	color: var(--canvas-text-color);
 }
 
